@@ -4,16 +4,16 @@ import Image from 'next/image'
 
 // Third Party imports
 
-// Domestic imports
+// Custom Components imports
 import { SEO } from '../Components/SEO'
 
 /** Home page */
 const Home: NextPage = () => {
   return (
     <div>
-      <SEO 
-        title="Indipix"
-        description="" 
+      <SEO
+        title='Indipix'
+        description="Indipix"
       />
     </div>
   )
