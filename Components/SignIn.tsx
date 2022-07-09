@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
 
 
-const SignIn = () => {
+const SignIn: React.FC  = () => {
     return (
         <div className="max-w-7xl mx-auto">
             <div className="flex justify-between">

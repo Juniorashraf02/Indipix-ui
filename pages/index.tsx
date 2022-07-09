@@ -5,7 +5,6 @@ import type { NextPage } from "next";
 
 // Domestic imports
 import SEO from "../Components/SEO";
-import SignIn from "../Components/SignIn";
 import SignUp from "../Components/SignUp";
 
 /** Home page */
@@ -13,7 +12,6 @@ const Home: NextPage = () => {
   return (
     <div>
       <SEO title="Indipix" description="" keywords="" />
-      <SignIn />
       <SignUp />
     </div>
   );

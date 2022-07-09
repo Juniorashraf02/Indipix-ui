@@ -6,7 +6,7 @@ import { FaFacebook, FaGoogle } from "react-icons/fa";
 
 
 // Signup Component
-const SignUp = () => {
+const SignUp: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto">
       <div className="flex justify-between">
