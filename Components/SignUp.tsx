@@ -82,7 +82,7 @@ const SignUp: React.FC = () => {
                     </Link></label>
                 </div>
                 <label htmlFor="submit">
-                  <input type="submit" name="submit" value="Sign Up" className="border border-slate-200 rounded w-full py-2 px-3 mt-7 text-slate-50 bg-red-500 leading-tight focus:outline-none focus:shadow-outline" />
+                  
                 </label>
               </form>
             </div>
