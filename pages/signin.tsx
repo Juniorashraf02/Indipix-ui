@@ -3,8 +3,8 @@ import Link from "next/link";
 
 // Third Party imports
 import { FaFacebook, FaGoogle } from "react-icons/fa";
-import ForgotPass from "../Components/ForgotPass";
-import NameAndPass from "../Components/nameAndPass";
+import ForgotPass from "../Components/Form/ForgotPass";
+import NameAndPass from "../Components/Form/NameAndPass";
 
 
 

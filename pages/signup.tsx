@@ -3,7 +3,7 @@ import Link from "next/link";
 
 // Third Party imports
 import { FaFacebook, FaGoogle } from "react-icons/fa";
-import PrivacyCheckbox from './../Components/PrivacyCheckbox';
+import PrivacyCheckbox from '../Components/Form/PrivacyCheckbox';
 
 
 // Signup Component
