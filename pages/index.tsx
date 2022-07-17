@@ -4,9 +4,9 @@ import type { NextPage } from "next";
 // Third Party imports
 
 // Domestic imports
-import SEO from "../Components/Misc/SEO";
-import Layout from "../Components/Layout/Layout";
 import Banner from "../Components/Banner";
+import Layout from "../Components/Layout/Layout";
+import SEO from "../Components/Misc/SEO";
 
 /** Home page */
 const Home: NextPage = () => {

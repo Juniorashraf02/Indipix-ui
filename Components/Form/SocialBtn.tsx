@@ -1,6 +1,5 @@
 // Core Library Imports
 import React from "react";
-import { FaGoogle } from "react-icons/fa";
 
 // Interface
 interface SocialWithProps {
