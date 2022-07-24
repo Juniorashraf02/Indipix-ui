@@ -34,7 +34,7 @@ const Register: NextPage = () => {
           />
         </div>
         <div className="w-1/2 flex items-center justify-center">
-          <div className="py-4 px-6 bg-white w-96 rounded-lg">
+          <div className="py-4 px-6 bg-white w-3/4 rounded-lg">
             <h2 className="text-2xl text-center font-semibold">Sign Up</h2>
             <div className="my-4">
               <SocialBtn

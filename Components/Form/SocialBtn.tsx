@@ -18,15 +18,15 @@ const SocialBtn: React.FC<SocialWithProps> = (props, { children }) => (
     <>
         {children}
         <div className="flex">
-        <button className="w-2/4 border drop-shadow-xl py-2 px-5 mr-3">
+        <button className="w-2/4 border drop-shadow-xl py-2 px-2 mr-3">
             <a href="#" className="flex items-center">
-                <FcGoogle className="text-2xl "/>
+                <FcGoogle className="text-2xl mr-2"/>
                 {props.gtext} 
                 </a>
         </button>
-        <button className="w-2/4 border drop-shadow-xl py-2 px-5 mr-3">
+        <button className="w-2/4 border drop-shadow-xl py-2 px-2 mr-3">
             <a href="#" className="flex items-center">
-                <FaFacebook className="text-2xl "/>
+                <FaFacebook className="text-2xl mr-2 "/>
                 {props.ftext} 
                 </a>
         </button>
