@@ -11,11 +11,12 @@ import SEO from "../../Components/Misc/SEO";
 import Layout from "../../Components/Layout/Layout";
 import Banner from "../../Components/Banner";
 import Link from "next/link";
-import { FaArrowCircleLeft, FaChevronRight } from "react-icons/fa";
+import { FaArrowCircleLeft, FaChevronRight, FaFacebook, FaGoogle } from "react-icons/fa";
 import CONFIG from "../../CONFIG";
 import Image from "next/image";
 import SocialBtn from "./../../Components/Form/SocialBtn";
 import PrivacyCheckbox from './../../Components/Form/PrivacyCheckbox';
+import Button from "../../Components/Form/Button";
 
 /** Register page */
 const Register: NextPage = () => {
@@ -34,17 +35,17 @@ const Register: NextPage = () => {
           />
         </div>
         <div className="w-1/2 flex items-center justify-center">
-          <div className="py-4 px-6 bg-white w-96 rounded-lg">
-            <h2 className="text-2xl text-center font-semibold">Sign Up</h2>
+          <div className="py-4 px-6 bg-white w-8/12 rounded-lg">
+          <h2 className="text-5xl text-center font-semibold my-5">Sign Up</h2>
+            <div className="lg:flex justify-between gap-3 mb-10">
+              <Button type="button" style="Normal" Label="Sign In with Google" icon={<FaGoogle className="text-red-600"/>} className="w-full" />
+              <Button type="button" style="Normal" Label="Sign in with Facebook" icon={<FaFacebook className="text-blue-600"/>} className="w-full" />
+            </div>
             <div className="my-4">
-              <SocialBtn
-                gtext="Sign up with google"
-                ftext="Sign up with facebook"
-              />
               <hr className="my-5" />
               <p className="-mt-9 text-center">
-                <span className="bg-white px-4 text-sm">
-                  or Sign up with Email
+                <span className="bg-white px-4 text-sm text-slate-800">
+                  or Sign Up with Email
                 </span>
               </p>
             </div>

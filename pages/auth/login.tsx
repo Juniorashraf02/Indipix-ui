@@ -1,19 +1,19 @@
 // NextJS & React imports
 import type { NextPage } from "next";
-import { useState } from "react";
+import Image from "next/image";
 
 // Third Party imports
 import axios from "axios";
-import { Formik, Field, Form } from "formik";
+import { Form, Formik } from "formik";
+import { setCookie } from 'nookies';
 
 // Domestic imports
-import SEO from "../../Components/Misc/SEO";
-import Layout from "../../Components/Layout/Layout";
-import Banner from "../../Components/Banner";
 import Link from "next/link";
-import { FaArrowCircleLeft, FaChevronRight } from "react-icons/fa";
+import { FaArrowCircleLeft, FaChevronRight, FaFacebook, FaGoogle } from "react-icons/fa";
+import Input from "../../Components/Form/Input";
+import SEO from "../../Components/Misc/SEO";
 import CONFIG from "../../CONFIG";
-import Image from "next/image";
+import Button from "../../Components/Form/Button";
 
 /** Login page */
 const Login: NextPage = () => {
@@ -23,14 +23,18 @@ const Login: NextPage = () => {
       <SEO title="Login in to Indipix" description="" keywords="" />
       <div className="h-screen flex">
         <div className="w-1/2 overflow-hidden relative">
-            <span className="absolute top-0 left-0">
-                <FaArrowCircleLeft />
-            </span>
-            <Image height={1080} width={1080} src="https://source.unsplash.com/random/1000x1000" />
+          <span className="absolute top-0 left-0">
+            <FaArrowCircleLeft />
+          </span>
+          <Image height={1080} width={1080} src="https://source.unsplash.com/random/1000x1000" />
         </div>
         <div className="w-1/2 flex items-center justify-center">
-          <div className="py-4 px-6 bg-white w-96 rounded-lg">
-            <h2 className="text-2xl text-center font-semibold">Sign In</h2>
+          <div className="py-4 px-6 bg-white w-8/12 rounded-lg">
+            <h2 className="text-5xl text-center font-semibold my-5">Sign In</h2>
+            <div className="lg:flex justify-between gap-3 mb-10">
+              <Button type="button" style="Normal" Label="Sign In with Google" icon={<FaGoogle className="text-red-600"/>} className="w-full" />
+              <Button type="button" style="Normal" Label="Sign in with Facebook" icon={<FaFacebook className="text-blue-600"/>} className="w-full" />
+            </div>
             <div className="my-4">
               <hr className="my-5" />
               <p className="-mt-9 text-center">
@@ -53,26 +57,26 @@ const Login: NextPage = () => {
                   }
                 );
 
-                localStorage.setItem("token", data.jwt);
+                setCookie(undefined, "jwt", data.jwt);
               }}
             >
-                <Form>
-              <div className="my-5">
-                <Field type="text" className="focus:outline-none border rounded p-2 text-sm w-full" id="identifier" name="identifier" placeholder="Username or email address" />
-              </div>
+              <Form>
+                <div className="my-5">
+                  <Input usingFormik={true} name="identifier" id="identifier" type="text" placeholder="Username or email address" className="focus:outline-none border rounded p-2 text-sm w-full" />
+                </div>
 
-              <div className="my-5">
-                <Field type="password" className="focus:outline-none border rounded p-2 text-sm w-full" id="password" name="password" placeholder="Password" />
-              </div>
+                <div className="my-5">
+                  <Input usingFormik={true} id="password" name="password" type="password" placeholder="Password" className="focus:outline-none border rounded p-2 text-sm w-full" />
+                </div>
 
-              <p className="text-xs text-center text-red text-red-700">
-                <Link href="/">Forgot Password</Link>
-              </p>
+                <p className="text-xs text-center text-red text-red-700">
+                  <Link href="/">Forgot Password</Link>
+                </p>
 
-              <button type="submit" className="flex items-center justify-center text-white bg-red-700 w-full mt-5 py-3 hover:bg-black rounded-sm select-none">
-                <span className="mr-2">Continue </span>
-                <FaChevronRight />
-              </button>
+                <button type="submit" className="flex items-center justify-center text-white bg-red-700 w-full mt-5 py-3 hover:bg-black rounded-sm select-none">
+                  <span className="mr-2">Continue </span>
+                  <FaChevronRight />
+                </button>
               </Form>
             </Formik>
 
