@@ -77,7 +77,7 @@ const Login: NextPage = () => {
             </Formik>
 
             <div className="text-xs text-center mt-5">
-              Don't have an account?{" "}
+              Dont have an account?{" "}
               <Link href="/">
                 <span className="text-red-700 cursor-pointer ml-1">
                   Sign up
