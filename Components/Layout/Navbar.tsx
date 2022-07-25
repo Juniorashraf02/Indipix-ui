@@ -1,4 +1,5 @@
 import { Field, Form, Formik } from "formik";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -28,10 +29,11 @@ const Navbar: React.FC<navbarProps> = (props) => {
     <nav className="container px-5 lg:px-10 xl:px-20 mx-auto flex items-center py-3 justify-between">
       <div className="">
         <Link href="/">
-          <img
+          <Image
             className="cursor-pointer mr-2"
-            width={25}
-            src="/logo.png"
+            width={32}
+            height={32}
+            src="/logo_white_bg.png"
             alt=""
           />
         </Link>

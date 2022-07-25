@@ -25,14 +25,10 @@ const Register: NextPage = () => {
       <SEO title="Login in to Indipix" description="" keywords="" />
       <div className="h-screen flex">
         <div className="w-1/2 overflow-hidden relative">
-          <span className="absolute top-0 left-0">
-            <FaArrowCircleLeft />
-          </span>
-          <Image
-            height={1080}
-            width={1080}
-            src="https://source.unsplash.com/random/1000x1000"
-          />
+            <span className="absolute top-0 left-0">
+                <FaArrowCircleLeft />
+            </span>
+            <Image alt="login image" height={1080} width={1080} src="https://source.unsplash.com/random/1000x1000" />
         </div>
         <div className="w-1/2 flex items-center justify-center">
           <div className="py-4 px-6 bg-white w-8/12 rounded-lg">
@@ -120,7 +116,7 @@ const Register: NextPage = () => {
             </Formik>
 
             <div className="text-xs text-center mt-5">
-              Already have an account?{" "}
+              Don&apos;t have an account?{" "}
               <Link href="/">
                 <span className="text-red-700 cursor-pointer ml-1">
                   Sign in
