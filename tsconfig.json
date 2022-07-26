@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/policy/[queryName].tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/policy/[queryName].tsx", "Components/Gallery/Gallery.tsx", "Components/Gallery/ImageCard.tsx", "pages/index.tsx"],
   "exclude": ["node_modules"]
 }

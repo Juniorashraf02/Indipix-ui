@@ -1,22 +1,18 @@
 // NextJS & React imports
 import type { NextPage } from "next";
-import { useState } from "react";
 
 // Third Party imports
 import axios from "axios";
-import { Formik, Field, Form } from "formik";
+import { Field, Form, Formik } from "formik";
 
 // Domestic imports
-import SEO from "../../Components/Misc/SEO";
-import Layout from "../../Components/Layout/Layout";
-import Banner from "../../Components/Banner";
+import Image from "next/image";
 import Link from "next/link";
 import { FaArrowCircleLeft, FaChevronRight, FaFacebook, FaGoogle } from "react-icons/fa";
-import CONFIG from "../../CONFIG";
-import Image from "next/image";
-import SocialBtn from "./../../Components/Form/SocialBtn";
-import PrivacyCheckbox from './../../Components/Form/PrivacyCheckbox';
 import Button from "../../Components/Form/Button";
+import SEO from "../../Components/Misc/SEO";
+import CONFIG from "../../CONFIG";
+import PrivacyCheckbox from './../../Components/Form/PrivacyCheckbox';
 
 /** Register page */
 const Register: NextPage = () => {
@@ -25,17 +21,17 @@ const Register: NextPage = () => {
       <SEO title="Login in to Indipix" description="" keywords="" />
       <div className="h-screen flex">
         <div className="w-1/2 overflow-hidden relative">
-            <span className="absolute top-0 left-0">
-                <FaArrowCircleLeft />
-            </span>
-            <Image alt="login image" height={1080} width={1080} src="https://source.unsplash.com/random/1000x1000" />
+          <span className="absolute top-0 left-0">
+            <FaArrowCircleLeft />
+          </span>
+          <Image alt="login image" height={1080} width={1080} src="https://source.unsplash.com/random/1000x1000" />
         </div>
         <div className="w-1/2 flex items-center justify-center">
           <div className="py-4 px-6 bg-white w-8/12 rounded-lg">
-          <h2 className="text-5xl text-center font-semibold my-5">Sign Up</h2>
+            <h2 className="text-5xl text-center font-semibold my-5">Sign Up</h2>
             <div className="lg:flex justify-between gap-3 mb-10">
-              <Button type="button" style="Normal" Label="Sign In with Google" icon={<FaGoogle className="text-red-600"/>} className="w-full" />
-              <Button type="button" style="Normal" Label="Sign in with Facebook" icon={<FaFacebook className="text-blue-600"/>} className="w-full" />
+              <Button type="button" style="Normal" label="Sign In with Google" icon={<FaGoogle className="text-red-600" />} className="w-full" />
+              <Button type="button" style="Normal" label="Sign in with Facebook" icon={<FaFacebook className="text-blue-600" />} className="w-full" />
             </div>
             <div className="my-4">
               <hr className="my-5" />
@@ -103,7 +99,7 @@ const Register: NextPage = () => {
                   />
                 </div>
 
-               <PrivacyCheckbox/>
+                <PrivacyCheckbox />
 
                 <button
                   type="submit"

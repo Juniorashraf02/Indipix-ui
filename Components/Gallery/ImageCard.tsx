@@ -1,11 +1,16 @@
+// Declareing Image Interface
 interface Images {
-  name: string;
-  address: string;
-  authorImg: string;
-  galleryImg: string;
+  data: {
+    image: string;
+    alternative: string;
+    author: string;
+    authorImage: string;
+    address: string;
+  }
 }
 
-const ImageCard = ({ galleryImg, name, address, authorImg }: Images) => {
+const ImageCard = ({ data }: Images) => {
+  const { image, alternative, author, authorImage, address } = data;
   return (
     <figure className="group relative rounded-xl mb-5">
       <div className="align-right absolute right-0 hidden group-hover:block ">
@@ -45,20 +50,20 @@ const ImageCard = ({ galleryImg, name, address, authorImg }: Images) => {
         </div>
       </div>
       <div className="img">
-        <img className="rounded-xl mx-auto" src={galleryImg} alt={name} />
+        <img className="rounded-xl mx-auto" src={image} alt={alternative} />
       </div>
       <div className="cursor-pointer hidden group-hover:block">
         <figcaption className="w-full flex justify-between absolute bottom-0 left-0 p-5">
           <div className="flex">
             <img
               className="w-10 rounded-full mx-auto"
-              src={authorImg}
-              alt={name}
+              src={authorImage}
+              alt={author}
             />
 
             <div className="ml-3 overflow-hidden">
-              <p className="text-sm font-bold text-slate-200">{name}</p>
-              <p className="text-sm text-slate-200 truncate">{address.slice(0,25)}</p>
+              <p className="text-sm font-bold text-slate-200">{author}</p>
+              <p className="text-sm text-slate-200 truncate">{address}</p>
             </div>
           </div>
           <button className="cursor-pointer">

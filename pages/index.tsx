@@ -6,6 +6,7 @@ import { parseCookies } from "nookies";
 
 // Domestic imports
 import Banner from "../Components/Banner";
+import Gallery from "../Components/Gallery/Gallery";
 import Layout from "../Components/Layout/Layout";
 import SEO from "../Components/Misc/SEO";
 
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
     <Layout isLoggedIn={cookies.jwt ? true : false}>
       <SEO title="Indipix" description="" keywords="" />
       <Banner />
+      <Gallery />
     </Layout>
   );
 };
