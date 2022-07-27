@@ -10,6 +10,8 @@ import Banner from "../Components/Banner";
 import Button from "../Components/Form/Button";
 import { FaSearch } from "react-icons/fa";
 import Register from "./auth/register";
+import Login from './auth/login';
+import Submit from "./user/submit";
 
 /** Home page */
 const Home: NextPage = () => {
@@ -24,7 +26,9 @@ const Home: NextPage = () => {
       <Button style="Secondary" Label="Search" type="button" />
       <br />
       <Button style="Warning" Label="Search" type="button" className=" mx-6 my-3  text-2xl px-10" />
+      <Login/>
       <Register/>
+      <Submit/>
     </Layout>
   );
 };

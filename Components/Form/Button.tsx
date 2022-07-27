@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = (props) => (
     className={`
       ${ props.style == "Primary" && " bg-red-700 text-white hover:bg-black "}
       ${ props.style == "Secondary" && "bg-gray-200 text-gray-500 hover:bg-gray-300 "}
-      ${ props.style == "Danger" && "bg-red-500 text-gray-500 hover:bg-gray-300 "}
+      ${ props.style == "Danger" && "bg-red-500 hover:text-gray-500 text-white hover:bg-gray-300 "}
       ${ props.style == "Warning" && " bg-orange-500 text-white hover:bg-black "} 
       ${ props.className !== null && props.className}
        px-2 py-2 rounded ${props.icon !== null ? "flex items-center justify-center" : ""

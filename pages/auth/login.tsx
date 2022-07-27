@@ -14,24 +14,35 @@ import Link from "next/link";
 import { FaArrowCircleLeft, FaChevronRight } from "react-icons/fa";
 import CONFIG from "../../CONFIG";
 import Image from "next/image";
+import SocialBtn from "../../Components/Form/SocialBtn";
 
 /** Login page */
 const Login: NextPage = () => {
-
   return (
     <>
       <SEO title="Login in to Indipix" description="" keywords="" />
       <div className="h-screen flex">
         <div className="w-1/2 overflow-hidden relative">
-            <span className="absolute top-0 left-0">
-                <FaArrowCircleLeft />
-            </span>
-            <Image height={1080} width={1080} src="https://source.unsplash.com/random/1000x1000" />
+          <span className="absolute top-0 left-0">
+            <FaArrowCircleLeft />
+          </span>
+          <Image
+            height={1080}
+            width={1080}
+            src="https://source.unsplash.com/random/1000x1000"
+            alt=""
+          />
         </div>
         <div className="w-1/2 flex items-center justify-center">
-          <div className="py-4 px-6 bg-white w-96 rounded-lg">
+          <div className="py-4 px-6 bg-white w-3/4 rounded-lg">
             <h2 className="text-2xl text-center font-semibold">Sign In</h2>
             <div className="my-4">
+
+            <SocialBtn
+                gtext="Sign in with google"
+                ftext="Sign in with facebook"
+              />
+
               <hr className="my-5" />
               <p className="-mt-9 text-center">
                 <span className="bg-white px-4 text-sm">
@@ -56,28 +67,43 @@ const Login: NextPage = () => {
                 localStorage.setItem("token", data.jwt);
               }}
             >
-                <Form>
-              <div className="my-5">
-                <Field type="text" className="focus:outline-none border rounded p-2 text-sm w-full" id="identifier" name="identifier" placeholder="Username or email address" />
-              </div>
+              <Form>
+                <div className="my-5">
+                  <Field
+                    type="text"
+                    className="focus:outline-none border rounded p-2 text-sm w-full"
+                    id="identifier"
+                    name="identifier"
+                    placeholder="Username or email address"
+                  />
+                </div>
 
-              <div className="my-5">
-                <Field type="password" className="focus:outline-none border rounded p-2 text-sm w-full" id="password" name="password" placeholder="Password" />
-              </div>
+                <div className="my-5">
+                  <Field
+                    type="password"
+                    className="focus:outline-none border rounded p-2 text-sm w-full"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                  />
+                </div>
 
-              <p className="text-xs text-center text-red text-red-700">
-                <Link href="/">Forgot Password</Link>
-              </p>
+                <p className="text-xs text-center text-red text-red-700">
+                  <Link href="/">Forgot Password</Link>
+                </p>
 
-              <button type="submit" className="flex items-center justify-center text-white bg-red-700 w-full mt-5 py-3 hover:bg-black rounded-sm select-none">
-                <span className="mr-2">Continue </span>
-                <FaChevronRight />
-              </button>
+                <button
+                  type="submit"
+                  className="flex items-center justify-center text-white bg-red-700 w-full mt-5 py-3 hover:bg-black rounded-sm select-none"
+                >
+                  <span className="mr-2">Sign in </span>
+                  <FaChevronRight />
+                </button>
               </Form>
             </Formik>
 
             <div className="text-xs text-center mt-5">
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <Link href="/">
                 <span className="text-red-700 cursor-pointer ml-1">
                   Sign up

@@ -31,6 +31,7 @@ const Register: NextPage = () => {
             height={1080}
             width={1080}
             src="https://source.unsplash.com/random/1000x1000"
+            alt=""
           />
         </div>
         <div className="w-1/2 flex items-center justify-center">
@@ -106,13 +107,13 @@ const Register: NextPage = () => {
                   />
                 </div>
 
-               <PrivacyCheckbox/>
+               <PrivacyCheckbox label="I&apos;ve read and agree with your" linekOne="Privacy Policy" and="and"/>
 
                 <button
                   type="submit"
                   className="flex items-center justify-center text-white bg-red-700 w-full mt-5 py-3 hover:bg-black rounded-sm select-none"
                 >
-                  <span className="mr-2">Continue </span>
+                  <span className="mr-2">Sign up</span>
                   <FaChevronRight />
                 </button>
               </Form>
