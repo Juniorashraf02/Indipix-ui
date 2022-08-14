@@ -85,9 +85,11 @@ const Navbar: React.FC<navbarProps> = (props) => {
               </li>
 
               <li>
-                <button className="text-white rounded-sm px-4 py-1 bg-red-700 hover:bg-black">
+                  <Link href="/auth/register">
+                  <button className="text-white rounded-sm px-4 py-1 bg-red-700 hover:bg-black">
                   Join
                 </button>
+                  </Link>
               </li>
             </>
           )}
