@@ -45,24 +45,25 @@ const Login: NextPage = () => {
             </div>
             <Formik
               initialValues={{
-                identifier: "",
+                email: "",
                 password: "",
               }}
               onSubmit={async (values) => {
-                const { data } = await axios.post(
-                  `${CONFIG.API_URL}/auth/local`,
-                  {
-                    identifier: values.identifier,
-                    password: values.password,
-                  }
-                );
-
-                setCookie(undefined, "jwt", data.jwt);
+                console.log(values)
+                await axios.post(
+                  `${CONFIG.API_URL}/auth/login`,
+                  // {
+                  //   email: values.email,
+                  //   password: values.password,
+                  // }
+                )
+                .then(result=>console.log(result))
+                // setCookie(undefined, "jwt", data.jwt);
               }}
             >
               <Form>
                 <div className="my-5">
-                  <Input usingFormik={true} name="identifier" id="identifier" type="text" placeholder="Username or email address" className="focus:outline-none border rounded p-2 text-sm w-full" />
+                  <Input usingFormik={true} name="email" id="identifier" type="text" placeholder="Username or email address" className="focus:outline-none border rounded p-2 text-sm w-full" />
                 </div>
 
                 <div className="my-5">

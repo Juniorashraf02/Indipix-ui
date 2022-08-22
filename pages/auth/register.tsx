@@ -43,14 +43,19 @@ const Register: NextPage = () => {
             </div>
             <Formik
               initialValues={{
-                identifier: "",
+                username: "",
+                email: "",
+                fullName: "",
                 password: "",
               }}
               onSubmit={async (values) => {
+                console.log(values)
                 const { data } = await axios.post(
-                  `${CONFIG.API_URL}/auth/local`,
+                  `${CONFIG.API_URL}/auth/register`,
                   {
-                    identifier: values.identifier,
+                    username: values.username,
+                    email: values.email,
+                    fullName: values.fullName,
                     password: values.password,
                   }
                 );
@@ -74,17 +79,17 @@ const Register: NextPage = () => {
                       type="text"
                       className="focus:outline-none border rounded p-2 text-sm w-full"
                       id="userName"
-                      name="userName"
+                      name="username"
                       placeholder="username"
                     />
                   </div>
                 </div>
                 <div className="my-5">
                   <Field
-                    type="text"
+                    type="email"
                     className="focus:outline-none border rounded p-2 text-sm w-full"
                     id="identifier"
-                    name="identifier"
+                    name="email"
                     placeholder="Username or email address"
                   />
                 </div>
